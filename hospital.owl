@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/michael/ontologies/2020/2/hospital"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/michael/ontologies/2020/2/hospital">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Clinic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dental_Clinic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Doctor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Eye_Clinic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hospital"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Laboratory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pharmacy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#diagnoses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#treats"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#doctor_ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#first_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#last_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#patient_ID"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Blood_type"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Crowns_and_Bridges"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oral_surgery"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pill"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sight_issue"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Clinic"/>
+        <Class IRI="#Hospital"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dental_Clinic"/>
+        <Class IRI="#Clinic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Doctor"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eye_Clinic"/>
+        <Class IRI="#Clinic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Laboratory"/>
+        <Class IRI="#Hospital"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pharmacy"/>
+        <Class IRI="#Hospital"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Laboratory"/>
+        <NamedIndividual IRI="#Blood_type"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dental_Clinic"/>
+        <NamedIndividual IRI="#Crowns_and_Bridges"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dental_Clinic"/>
+        <NamedIndividual IRI="#Oral_surgery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pharmacy"/>
+        <NamedIndividual IRI="#Pill"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Eye_Clinic"/>
+        <NamedIndividual IRI="#sight_issue"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#diagnoses"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#treats"/>
+        <Class IRI="#Doctor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#diagnoses"/>
+        <Class IRI="#Hospital"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#treats"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#doctor_ID"/>
+        <Class IRI="#Doctor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#first_name"/>
+        <Class IRI="#Doctor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#first_name"/>
+        <Class IRI="#Patient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#last_name"/>
+        <Class IRI="#Doctor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#last_name"/>
+        <Class IRI="#Patient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#patient_ID"/>
+        <Class IRI="#Patient"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#doctor_ID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#first_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#last_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#patient_ID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
